@@ -1,0 +1,28 @@
+@import "variables";
+
+#home_view {
+  background-color: $dark_grey;
+  color: $white;
+}
+
+#home_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1,
+  h3 {
+    margin: 0;
+  }
+}
+
+#home_title {
+  font-size: $title_font_size;
+}
+
+#home_subtitle {
+  font-size: $subtitle_font_size;
+  margin-top: 10px;
+}

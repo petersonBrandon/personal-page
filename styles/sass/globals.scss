@@ -1,0 +1,144 @@
+@import "variables";
+
+html,
+body {
+  margin: 0;
+  font-family: $primary-font;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+.view_title {
+  font-size: $title_font_size;
+  margin-top: 0;
+}
+
+#hamburger_icon_wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: translateX(-100px);
+  cursor: pointer;
+  z-index: 1;
+}
+
+#hamburger_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+}
+
+#hamburger_icon:hover .hamburger_line {
+  background-color: $dark_grey_opaque;
+  transition: 0.25s ease;
+}
+
+.hamburger_line {
+  width: 50px;
+  height: 5px;
+  margin: 5px;
+  background-color: $dark_grey;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+
+.animate_in {
+  animation: in 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.animate_out {
+  animation: out 0.1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes in {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+.hamburger_open {
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger_open .hamburger_line:nth-child(1) {
+  transform: translateY(17px) rotate(-45deg);
+}
+
+.hamburger_open .hamburger_line:nth-child(2) {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.hamburger_open .hamburger_line:nth-child(3) {
+  transform: translateY(-13px) rotate(45deg);
+}
+
+#nav_item_container {
+  height: 100vh;
+  width: 20vw;
+  background-color: $red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 25px -0px 36px -18px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 25px -0px 36px -18px rgba(0, 0, 0, 0.5);
+}
+
+.nav_open {
+  transform: translateX(0px);
+  transition: 0.25s ease;
+}
+
+.nav_closed {
+  transform: translateX(-1000px);
+  transition: 0.25s ease;
+}
+
+.nav_tile {
+  height: 5rem;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: $nav_font_size;
+  }
+}
