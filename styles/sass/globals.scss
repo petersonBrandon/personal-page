@@ -7,6 +7,8 @@ body {
 
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
+  color: $dark_grey;
 }
 
 .view {
@@ -20,7 +22,7 @@ body {
 }
 
 .view_title {
-  font-size: $title_font_size;
+  font-size: $header_font_size;
   margin-top: 0;
 }
 
@@ -30,7 +32,7 @@ body {
   left: 20px;
   transform: translateX(-100px);
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 
 #hamburger_icon {
@@ -118,6 +120,7 @@ body {
   justify-content: flex-end;
   box-shadow: 15px 0px 24px -12px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 15px 0px 24px -12px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .nav_open {
