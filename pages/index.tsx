@@ -10,14 +10,14 @@ export default function Home() {
   useEffect(() => {
     const onScroll = () => {
       setNavDisplay(false);
-      if (window.scrollY >= window.innerHeight - 40) {
+      if (window.scrollY >= window.innerHeight - 10) {
         sethamburgerDisplay(true);
       } else {
         sethamburgerDisplay(false);
       }
     };
 
-    if (window.pageYOffset >= window.innerHeight - 40) {
+    if (window.pageYOffset >= window.innerHeight - 10) {
       sethamburgerDisplay(true);
     }
     window.addEventListener("scroll", onScroll);
@@ -70,7 +70,11 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <main>
+      <main
+        onClick={() => {
+          setNavDisplay(false);
+        }}
+      >
         <section className="view" id="home_view">
           <div id="home_header">
             <h1 id="home_title">BRANDON PETERSON</h1>
