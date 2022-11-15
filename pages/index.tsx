@@ -52,21 +52,27 @@ export default function Home() {
         >
           <div className="nav_tile">
             <a href="#home_view">HOME</a>
+            <span className="nav_tile_hover"></span>
           </div>
           <div className="nav_tile">
             <a href="#about_me_view">ABOUT ME</a>
+            <span className="nav_tile_hover"></span>
           </div>
           <div className="nav_tile">
             <a href="#skills_view">SKILLS</a>
+            <span className="nav_tile_hover"></span>
           </div>
           <div className="nav_tile">
             <a href="#projects_view">PROJECTS</a>
+            <span className="nav_tile_hover"></span>
           </div>
           <div className="nav_tile">
             <a href="#certifications_view">CERTIFICATES</a>
+            <span className="nav_tile_hover"></span>
           </div>
           <div className="nav_tile">
             <a href="#contact_view">CONTACT</a>
+            <span className="nav_tile_hover"></span>
           </div>
         </div>
       </nav>
