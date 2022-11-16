@@ -1,17 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
 html,
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   color: #373f47;
+}
+
+#home_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#home_title {
+  font-family: "Aboreto", cursive;
+}
+
+#home_subtitle {
+  font-family: "Raleway", sans-serif;
 }
 
 .view {
@@ -20,13 +36,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   scroll-snap-align: center;
 }
 
 .view_title {
-  font-size: 3rem;
-  margin-top: 0;
+  font-family: "Aboreto", cursive;
+  font-size: 3.7rem;
 }
 
 #hamburger_icon_wrapper {
@@ -188,7 +203,7 @@ body {
 }
 
 #home_title {
-  font-size: 4rem;
+  font-size: 4.7rem;
 }
 
 #home_subtitle {
@@ -232,12 +247,12 @@ body {
 }
 
 #skills_view {
-  background-color: #46b1c9;
+  background-color: #fdfdff;
 }
 
 #skills_content {
   width: 100%;
-  max-width: 90vw;
+  max-width: 100vw;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
@@ -246,6 +261,7 @@ body {
   padding: 1.5rem 0;
   overflow: hidden;
   z-index: 0;
+  background-color: #46b1c9;
 }
 
 .loop-slider .inner {

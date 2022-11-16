@@ -128,12 +128,12 @@ export default function Home() {
             <h3 id="home_subtitle">SOFTWARE ENGINEER</h3>
           </div>
         </section>
-        <section className="view" id="certifications_view">
+        {/* <section className="view" id="certifications_view">
           <div id="home_header">
             <h1 id="home_title">BRANDON PETERSON</h1>
             <h3 id="home_subtitle">SOFTWARE ENGINEER</h3>
           </div>
-        </section>
+        </section> */}
         <section className="view" id="contact_view">
           <div id="home_header">
             <h1 id="home_title">BRANDON PETERSON</h1>
