@@ -197,6 +197,8 @@ body {
 }
 
 #about_content {
+  grid-column: 2/span 9;
+  grid-row: 5/span 2;
   display: grid;
   grid-template-columns: repeat(10, 10%);
   width: 80%;
@@ -276,11 +278,14 @@ body {
   background-color: #fdfdff;
   border-radius: 10px;
   margin: 10px;
+  gap: 0 0.2rem;
+  margin-right: 1rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  box-shadow: 0px 15px 36px -16px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 15px 36px -16px rgba(0, 0, 0, 0.5);
 }
 .skill_wrapper h4 {
   margin: 0;

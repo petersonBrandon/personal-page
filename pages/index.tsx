@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import React from "react";
 import Skill from "../resources/Skill";
 import LoopingCarousel from "../resources/LoopingCarousel";
+import Navigation from "../resources/Navigations";
 
 import profilePic from "../public/profilePic.jpg";
 import js_logo from "../public/skills/js_logo.jpg";
@@ -26,10 +27,7 @@ import git_logo from "../public/skills/git_logo.png";
 export default function Home() {
   const [hydrated, setHydrated] = React.useState(false);
 
-  const [hamburgerDisplay, sethamburgerDisplay] = useState(false);
-  const [navDisplay, setNavDisplay] = useState(false);
-
-  const ROWS = 2;
+  const ROWS = 3;
   const DURATION = 40000;
 
   const SKILLS = [
@@ -56,19 +54,6 @@ export default function Home() {
     Math.floor(Math.random() * (max - min)) + min;
 
   useEffect(() => {
-    const onScroll = () => {
-      setNavDisplay(false);
-      if (window.scrollY >= window.innerHeight - 10) {
-        sethamburgerDisplay(true);
-      } else {
-        sethamburgerDisplay(false);
-      }
-    };
-
-    if (window.pageYOffset >= window.innerHeight - 10) {
-      sethamburgerDisplay(true);
-    }
-    window.addEventListener("scroll", onScroll);
     setHydrated(true);
   }, []);
 
@@ -82,58 +67,9 @@ export default function Home() {
         <title>Brandon Peterson</title>
         <meta name="description" content="Brandon Peterson's Portfolio page." />
       </Head>
-      <nav>
-        <div
-          id="hamburger_icon_wrapper"
-          className={hamburgerDisplay ? "animate_in" : "animate_out"}
-          onClick={() => {
-            setNavDisplay(!navDisplay);
-          }}
-        >
-          <div
-            id="hamburger_icon"
-            className={navDisplay ? "hamburger_open" : ""}
-          >
-            <div className="hamburger_line" id="hamburger_top" />
-            <div className="hamburger_line" id="hamburger_middle" />
-            <div className="hamburger_line" id="hamburger_bottom" />
-          </div>
-        </div>
-        <div
-          id="nav_item_container"
-          className={navDisplay ? "nav_open" : "nav_closed"}
-        >
-          <div className="nav_tile">
-            <a href="#home_view">HOME</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-          <div className="nav_tile">
-            <a href="#about_me_view">ABOUT ME</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-          <div className="nav_tile">
-            <a href="#skills_view">SKILLS</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-          <div className="nav_tile">
-            <a href="#projects_view">PROJECTS</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-          <div className="nav_tile">
-            <a href="#certifications_view">CERTIFICATES</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-          <div className="nav_tile">
-            <a href="#contact_view">CONTACT</a>
-            <span className="nav_tile_hover"></span>
-          </div>
-        </div>
-      </nav>
-      <main
-        onClick={() => {
-          setNavDisplay(false);
-        }}
-      >
+
+      <main>
+        <Navigation />
         <section className="view" id="home_view">
           <div id="home_header">
             <h1 id="home_title">BRANDON PETERSON</h1>
@@ -141,7 +77,9 @@ export default function Home() {
           </div>
         </section>
         <section className="view" id="about_me_view">
-          <h1 className="view_title">ABOUT ME</h1>
+          <h1 className="view_title" id="about_me_title">
+            ABOUT ME
+          </h1>
           <div id="about_content">
             <div id="about_image_wrapper">
               <Image
@@ -171,7 +109,13 @@ export default function Home() {
                 duration={random(DURATION - 10000, DURATION + 10000)}
               >
                 {shuffle(SKILLS).map((skill) => {
-                  return <Skill image={skill.image} title={skill.title} />;
+                  return (
+                    <Skill
+                      key={skill.title}
+                      image={skill.image}
+                      title={skill.title}
+                    />
+                  );
                 })}
               </LoopingCarousel>
             ))}
