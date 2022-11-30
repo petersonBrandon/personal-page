@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 html,
 body {
   margin: 0;
@@ -222,6 +229,16 @@ body {
   margin-top: 10px;
 }
 
+#about_content_background {
+  background-color: #46b1c9;
+  width: 100%;
+  height: 620px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 #about_content {
   grid-column: 2/span 9;
   grid-row: 5/span 2;
@@ -235,17 +252,138 @@ body {
   object-fit: cover;
   border-radius: 100%;
 }
-#about_content p {
+#about_content .about_cards {
   margin: 0;
-  grid-row: 2;
-  grid-column: 4/span 6;
+  grid-row: 1/span 3;
+  grid-column: 4/span 7;
   margin-left: 3rem;
   font-size: 1.2rem;
   padding: 20px;
-  background-color: rgba(70, 177, 201, 0.1764705882);
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#about_content .about_cards .opened_card {
+  position: fixed;
+  background-color: #fdfdff;
+  width: 60vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 11;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.75rem;
+}
+#about_content .about_cards .opened_card h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 3.5rem;
+  width: 100%;
+}
+#about_content .about_cards .opened_card h2 {
+  text-align: center;
+  margin: 0;
+}
+#about_content .about_cards .opened_card p {
+  padding: 30px 60px 10px 60px;
+  margin: 0;
+  text-indent: 80px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #373f47;
+  font-size: 1.75rem;
+}
+#about_content .about_cards .opened_card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#about_content .about_cards .opened_card #hobbies_header {
+  font-size: 6rem;
+}
+#about_content .about_cards .opened_card ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 0;
+  margin: 40px;
+}
+#about_content .about_cards .opened_card ul li {
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.75rem;
+}
+#about_content .about_cards .opened_card .padding-bottom0 {
+  padding-bottom: 0;
+}
+#about_content .about_cards .opened_card .padding-top0 {
+  padding-top: 0;
+}
+#about_content .about_cards .card {
+  background-color: #fdfdff;
+  margin: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  cursor: pointer;
   box-shadow: 25px 25px 38px -24px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 25px 25px 38px -24px rgba(0, 0, 0, 0.5);
+}
+#about_content .about_cards #Purpose {
+  grid-column: 1/span 3;
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  letter-spacing: 7px;
+  color: #d36135;
+  font-size: 6rem;
+}
+#about_content .about_cards #School {
+  grid-column: 4/span 2;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+}
+#about_content .about_cards #Family {
+  grid-column: 1/span 2;
+  font-family: "BhuTuka Expanded One", cursive;
+  font-weight: bold;
+}
+#about_content .about_cards #Hobbies {
+  grid-column: 3/span 3;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 6rem;
+}
+#about_content .about_cards .dim-layer {
+  border-radius: 0;
+  margin: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: 0;
+  z-index: -1111111;
+}
+#about_content .about_cards .dim_open {
+  z-index: 10;
 }
 
 #about_image_wrapper {
@@ -255,6 +393,7 @@ body {
   border-radius: 100%;
   box-shadow: 25px 25px 38px -16px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 25px 25px 38px -16px rgba(0, 0, 0, 0.5);
+  border: 15px solid #fdfdff;
 }
 
 #skills_view {
@@ -347,31 +486,37 @@ body {
 
 #projects_content {
   margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(23, 1fr);
+  grid-template-rows: repeat(11, 1fr);
   width: 80%;
+  height: 80%;
 }
 
 .project_tile {
-  height: 400px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
-  margin: 15px;
   transition: 0.25s ease;
   cursor: pointer;
   box-shadow: 0px 15px 36px -16px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 15px 36px -16px rgba(0, 0, 0, 0.5);
 }
 
-.project_tile[data-isOpen=true] {
-  width: 1000px;
+#project_1 {
+  grid-column: 2/span 6;
+  grid-row: 2/span 9;
 }
 
-#primary_project_tile {
-  height: 550px;
-  width: 400px;
+#project_2 {
+  grid-column: 9/span 7;
+  grid-row: 1/span 11;
   font-size: 1.25rem;
+}
+
+#project_3 {
+  grid-column: 17/span 6;
+  grid-row: 2/span 9;
 }
 
 .project_image_wrapper {
@@ -408,9 +553,12 @@ body {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-all;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
+}
+
+.project_expand_background {
+  background-color: rgba(70, 177, 201, 0.6039215686);
 }
 
 #certifications_view {

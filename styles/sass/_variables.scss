@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Caveat&family=Dancing+Script&display=swap");
 
 $orange: #d36135;
 $dark_grey: #373f47;
 $dark_grey_opaque: #373f479f;
 $blue: #46b1c9;
-$blue_opaque: #46b1c92d;
+$blue_opaque: #46b1c99a;
 $white: #fdfdff;
 $white_opaque: #fdfdff8f;
 $red: #cc2836;
-$red_light: #66151c;
+$red_dark: #66151c;
 
 $primary-font: "Aboreto", cursive;
 $secondary-font: "Raleway", sans-serif;
@@ -21,3 +22,10 @@ $nav_font_size: 1.75rem;
 $skill_font_size: 1.5rem;
 
 $icon_size: 5rem;
+
+$about_font_1: "Bebas Neue", cursive;
+$about_font_2: "BhuTuka Expanded One", cursive;
+$about_font_3: "Caveat", cursive;
+$about_font_4: "Dancing Script", cursive;
+
+$about_card_font_size: 3.5rem;

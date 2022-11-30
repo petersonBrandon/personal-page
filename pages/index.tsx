@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Skill from "../resources/Skill";
 import LoopingCarousel from "../resources/LoopingCarousel";
 import Navigation from "../resources/Navigations";
@@ -31,11 +31,10 @@ import appium_logo from "../public/skills/appium_logo.png";
 import codex from "../public/projects/codex.png";
 import zen_garden from "../public/projects/zen_garden.png";
 import time_sheet from "../public/projects/time_sheet.png";
+import AboutCards from "../resources/AboutCards";
 
 export default function Home() {
   const [hydrated, setHydrated] = useState(false);
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const ROWS = 3;
   const DURATION = 40000;
@@ -94,24 +93,18 @@ export default function Home() {
             <h1 className="view_title" id="about_me_title">
               ABOUT ME
             </h1>
-            <div id="about_content">
-              <div id="about_image_wrapper">
-                <Image
-                  src={profilePic}
-                  alt="Brandon Peterson"
-                  width={3000}
-                  height={3000}
-                />
+            <div id="about_content_background">
+              <div id="about_content">
+                <div id="about_image_wrapper">
+                  <Image
+                    src={profilePic}
+                    alt="Brandon Peterson"
+                    width={3000}
+                    height={3000}
+                  />
+                </div>
+                <AboutCards />
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
             </div>
           </div>
         </section>
@@ -144,17 +137,7 @@ export default function Home() {
             <h1 className="view_title">PROJECTS</h1>
             <div id="projects_background">
               <div id="projects_content">
-                <motion.div
-                  layout
-                  data-isOpen={isOpen}
-                  whileHover={{
-                    scale: 1.05,
-                  }}
-                  className="project_tile"
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                >
+                <motion.div className="project_tile" id="project_1">
                   <div className="project_image_wrapper">
                     <Image
                       src={zen_garden}
@@ -177,13 +160,7 @@ export default function Home() {
                     </p>
                   </div>
                 </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                  }}
-                  className="project_tile"
-                  id="primary_project_tile"
-                >
+                <motion.div className="project_tile" id="project_2">
                   <div className="project_image_wrapper">
                     <Image src={codex} alt="Codex" height={2000} width={2000} />
                   </div>
@@ -201,12 +178,7 @@ export default function Home() {
                     </p>
                   </div>
                 </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                  }}
-                  className="project_tile"
-                >
+                <motion.div className="project_tile" id="project_3">
                   <div className="project_image_wrapper">
                     <Image
                       src={time_sheet}
