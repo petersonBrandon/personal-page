@@ -137,70 +137,80 @@ export default function Home() {
             <h1 className="view_title">PROJECTS</h1>
             <div id="projects_background">
               <div id="projects_content">
-                <motion.div className="project_tile" id="project_1">
-                  <div className="project_image_wrapper">
-                    <Image
-                      src={zen_garden}
-                      alt="CSS Zen Garden"
-                      height={2000}
-                      width={2000}
-                    />
-                  </div>
-                  <div className="project_body">
-                    <h1>CSS Zen Garden</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </motion.div>
-                <motion.div className="project_tile" id="project_2">
-                  <div className="project_image_wrapper">
-                    <Image src={codex} alt="Codex" height={2000} width={2000} />
-                  </div>
-                  <div className="project_body">
-                    <h1>Codex</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </motion.div>
-                <motion.div className="project_tile" id="project_3">
-                  <div className="project_image_wrapper">
-                    <Image
-                      src={time_sheet}
-                      alt="Time Sheet"
-                      height={2000}
-                      width={2000}
-                    />
-                  </div>
-                  <div className="project_body">
-                    <h1>Time Sheet</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </motion.div>
+                <a
+                  href="https://petersonbrandon.github.io/ZenGarden/"
+                  id="project_1"
+                  target="_blank"
+                >
+                  <motion.div className="project_tile">
+                    <div className="project_image_wrapper">
+                      <Image
+                        src={zen_garden}
+                        alt="CSS Zen Garden"
+                        height={2000}
+                        width={2000}
+                      />
+                    </div>
+                    <div className="project_body">
+                      <h1>CSS Zen Garden</h1>
+                      <p>
+                        Project to see what could be done to an HTML page with
+                        CSS without changing any of the HTML.
+                      </p>
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://github.com/petersonBrandon/codex"
+                  id="project_2"
+                  target="_blank"
+                >
+                  <motion.div className="project_tile">
+                    <div className="project_image_wrapper">
+                      <Image
+                        src={codex}
+                        alt="Codex"
+                        height={2000}
+                        width={2000}
+                      />
+                    </div>
+                    <div className="project_body">
+                      <h1>Codex</h1>
+                      <p>
+                        While no longer operational, Codex was designed as a
+                        project based forum/blog platform. It allowed me to
+                        learn so much from authentication, database storage,
+                        sessions, cookies, and so much more.
+                      </p>
+                    </div>
+                  </motion.div>
+                </a>
+                <a
+                  href="https://github.com/petersonBrandon/Time-Sheet"
+                  id="project_3"
+                  target="_blank"
+                >
+                  <motion.div className="project_tile">
+                    <div className="project_image_wrapper">
+                      <Image
+                        src={time_sheet}
+                        alt="Time Sheet"
+                        height={2000}
+                        width={2000}
+                      />
+                    </div>
+                    <div className="project_body">
+                      <h1>Time Sheet</h1>
+                      <p>
+                        Designed for my work, this time sheet application is a
+                        python based time punch GUI that takes record of clock
+                        in and out time, lunches, breaks, and even sends
+                        messages alerting team members when any of these actions
+                        is performed.
+                      </p>
+                    </div>
+                  </motion.div>
+                </a>
               </div>
             </div>
           </div>

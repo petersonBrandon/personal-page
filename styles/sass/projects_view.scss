@@ -18,6 +18,17 @@
   grid-template-rows: repeat(11, 1fr);
   width: 80%;
   height: 80%;
+
+  a {
+    text-decoration: none;
+    color: $dark_grey;
+    transition: 0.25s ease;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+    transition: 0.25s ease;
+  }
 }
 
 .project_tile {

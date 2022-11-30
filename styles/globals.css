@@ -492,6 +492,15 @@ body {
   width: 80%;
   height: 80%;
 }
+#projects_content a {
+  text-decoration: none;
+  color: #373f47;
+  transition: 0.25s ease;
+}
+#projects_content a:hover {
+  transform: scale(1.1);
+  transition: 0.25s ease;
+}
 
 .project_tile {
   height: 100%;
