@@ -2,4 +2,70 @@
 
 #contact_view {
   background-color: $dark_grey;
+  color: $white;
+
+  #contact_background {
+    width: 100%;
+    height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact_content {
+    width: 80%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    background-color: $white;
+    color: $dark_grey;
+    border-radius: 30px;
+    width: 60%;
+
+    input[type="submit"] {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      margin: 20px;
+      margin-right: 0;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: $blue_opaque;
+      transition: 0.25s ease;
+    }
+
+    .input_item {
+      width: 100%;
+
+      input,
+      textarea {
+        background-color: $dark_grey;
+        border: none;
+        color: $white;
+        // padding: 10px;
+        border-radius: 10px;
+        font-family: $secondary-font;
+        width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
 }

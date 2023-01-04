@@ -2,11 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
 import Skill from "../resources/Skill";
 import LoopingCarousel from "../resources/LoopingCarousel";
 import Navigation from "../resources/Navigations";
-
 import profilePic from "../public/profilePic.jpg";
 import js_logo from "../public/skills/js_logo.jpg";
 import css_logo from "../public/skills/css_logo.png";
@@ -35,6 +35,11 @@ import AboutCards from "../resources/AboutCards";
 
 export default function Home() {
   const [hydrated, setHydrated] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const ROWS = 3;
   const DURATION = 40000;
@@ -72,6 +77,8 @@ export default function Home() {
   if (!hydrated) {
     return null;
   }
+
+  const sendEmail = (data: any) => {};
 
   return (
     <div>
@@ -222,9 +229,37 @@ export default function Home() {
           </div>
         </section> */}
         <section className="view" id="contact_view">
-          <div id="home_header">
-            <h1 id="home_title">BRANDON PETERSON</h1>
-            <h3 id="home_subtitle">SOFTWARE ENGINEER</h3>
+          <div className="view_content">
+            <h1 className="view_title">CONTACT ME</h1>
+            <div id="contact_background">
+              <div id="contact_content">
+                {/* <form onSubmit={handleSubmit(sendEmail)}>
+                  <div className="input_item">
+                    <p>Name:</p>
+                    <input
+                      type="text"
+                      {...(register("name"), { required: true })}
+                    />
+                  </div>
+                  <div className="input_item">
+                    <p>Email:</p>
+                    <input
+                      type="email"
+                      {...(register("email"), { required: true })}
+                    />
+                  </div>
+                  <div className="input_item">
+                    <p>Message:</p>
+                    <textarea
+                      rows={5}
+                      {...register("message", { required: true })}
+                    ></textarea>
+                    {errors.body && <span>This field is required</span>}
+                  </div>
+                  <input type="submit" id="send_email_btn" value="SEND"></input>
+                </form> */}
+              </div>
+            </div>
           </div>
         </section>
       </main>

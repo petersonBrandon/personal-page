@@ -20,6 +20,7 @@ const AboutCards = () => {
       case "Purpose":
         return (
           <motion.div
+            layout
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedId ? 1 : 0 }}
             transition={{ delay: 0.2 }}
@@ -40,6 +41,7 @@ const AboutCards = () => {
       case "School":
         return (
           <motion.div
+            layout
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedId ? 1 : 0 }}
             transition={{ delay: 0.2 }}
@@ -64,6 +66,7 @@ const AboutCards = () => {
       case "Family":
         return (
           <motion.div
+            layout
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedId ? 1 : 0 }}
             transition={{ delay: 0.2 }}
@@ -79,6 +82,7 @@ const AboutCards = () => {
       case "Hobbies":
         return (
           <motion.div
+            layout
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedId ? 1 : 0 }}
             transition={{ delay: 0.2 }}
